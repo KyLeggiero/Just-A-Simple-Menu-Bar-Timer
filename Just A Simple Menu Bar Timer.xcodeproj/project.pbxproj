@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B99A2C832824CC9500333BE4 /* Timer + SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99A2C822824CC9500333BE4 /* Timer + SwiftUI.swift */; };
+		B9C4452F280FB34000218E3B /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C4452E280FB34000218E3B /* App.swift */; };
+		B9C44531280FB34000218E3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C44530280FB34000218E3B /* ContentView.swift */; };
+		B9C44533280FB34200218E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C44532280FB34200218E3B /* Assets.xcassets */; };
+		B9C44536280FB34200218E3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C44535280FB34200218E3B /* Preview Assets.xcassets */; };
+		B9C44541280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C44540280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerTests.swift */; };
+		B9C4454B280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C4454A280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerUITests.swift */; };
+		B9C4454D280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C4454C280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerUITestsLaunchTests.swift */; };
+		B9C4455A280FDDE300218E3B /* TimerListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C44559280FDDE300218E3B /* TimerListItemView.swift */; };
+		B9C4455C280FDE9100218E3B /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C4455B280FDE9100218E3B /* Timer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B9C4453D280FB34200218E3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9C44523280FB34000218E3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9C4452A280FB34000218E3B;
+			remoteInfo = "Just A Simple Menu Bar Timer";
+		};
+		B9C44547280FB34200218E3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9C44523280FB34000218E3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9C4452A280FB34000218E3B;
+			remoteInfo = "Just A Simple Menu Bar Timer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B99A2C822824CC9500333BE4 /* Timer + SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer + SwiftUI.swift"; sourceTree = "<group>"; };
+		B9C4452B280FB34000218E3B /* Just A Simple Menu Bar Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Just A Simple Menu Bar Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9C4452E280FB34000218E3B /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		B9C44530280FB34000218E3B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B9C44532280FB34200218E3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9C44535280FB34200218E3B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B9C44537280FB34200218E3B /* Just_A_Simple_Menu_Bar_Timer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Just_A_Simple_Menu_Bar_Timer.entitlements; sourceTree = "<group>"; };
+		B9C4453C280FB34200218E3B /* Just A Simple Menu Bar TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Just A Simple Menu Bar TimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9C44540280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Just_A_Simple_Menu_Bar_TimerTests.swift; sourceTree = "<group>"; };
+		B9C44546280FB34200218E3B /* Just A Simple Menu Bar TimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Just A Simple Menu Bar TimerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9C4454A280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Just_A_Simple_Menu_Bar_TimerUITests.swift; sourceTree = "<group>"; };
+		B9C4454C280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Just_A_Simple_Menu_Bar_TimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B9C44559280FDDE300218E3B /* TimerListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerListItemView.swift; sourceTree = "<group>"; };
+		B9C4455B280FDE9100218E3B /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B9C44528280FB34000218E3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9C44539280FB34200218E3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9C44543280FB34200218E3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B9C44522280FB34000218E3B = {
+			isa = PBXGroup;
+			children = (
+				B9C4452D280FB34000218E3B /* Just A Simple Menu Bar Timer */,
+				B9C4453F280FB34200218E3B /* Just A Simple Menu Bar TimerTests */,
+				B9C44549280FB34200218E3B /* Just A Simple Menu Bar TimerUITests */,
+				B9C4452C280FB34000218E3B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B9C4452C280FB34000218E3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9C4452B280FB34000218E3B /* Just A Simple Menu Bar Timer.app */,
+				B9C4453C280FB34200218E3B /* Just A Simple Menu Bar TimerTests.xctest */,
+				B9C44546280FB34200218E3B /* Just A Simple Menu Bar TimerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9C4452D280FB34000218E3B /* Just A Simple Menu Bar Timer */ = {
+			isa = PBXGroup;
+			children = (
+				B9C4452E280FB34000218E3B /* App.swift */,
+				B9C44530280FB34000218E3B /* ContentView.swift */,
+				B9C44559280FDDE300218E3B /* TimerListItemView.swift */,
+				B9C4455B280FDE9100218E3B /* Timer.swift */,
+				B99A2C822824CC9500333BE4 /* Timer + SwiftUI.swift */,
+				B9C44532280FB34200218E3B /* Assets.xcassets */,
+				B9C44537280FB34200218E3B /* Just_A_Simple_Menu_Bar_Timer.entitlements */,
+				B9C44534280FB34200218E3B /* Preview Content */,
+			);
+			path = "Just A Simple Menu Bar Timer";
+			sourceTree = "<group>";
+		};
+		B9C44534280FB34200218E3B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B9C44535280FB34200218E3B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B9C4453F280FB34200218E3B /* Just A Simple Menu Bar TimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				B9C44540280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerTests.swift */,
+			);
+			path = "Just A Simple Menu Bar TimerTests";
+			sourceTree = "<group>";
+		};
+		B9C44549280FB34200218E3B /* Just A Simple Menu Bar TimerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B9C4454A280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerUITests.swift */,
+				B9C4454C280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerUITestsLaunchTests.swift */,
+			);
+			path = "Just A Simple Menu Bar TimerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B9C4452A280FB34000218E3B /* Just A Simple Menu Bar Timer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9C44550280FB34200218E3B /* Build configuration list for PBXNativeTarget "Just A Simple Menu Bar Timer" */;
+			buildPhases = (
+				B9C44527280FB34000218E3B /* Sources */,
+				B9C44528280FB34000218E3B /* Frameworks */,
+				B9C44529280FB34000218E3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Just A Simple Menu Bar Timer";
+			productName = "Just A Simple Menu Bar Timer";
+			productReference = B9C4452B280FB34000218E3B /* Just A Simple Menu Bar Timer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B9C4453B280FB34200218E3B /* Just A Simple Menu Bar TimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9C44553280FB34200218E3B /* Build configuration list for PBXNativeTarget "Just A Simple Menu Bar TimerTests" */;
+			buildPhases = (
+				B9C44538280FB34200218E3B /* Sources */,
+				B9C44539280FB34200218E3B /* Frameworks */,
+				B9C4453A280FB34200218E3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9C4453E280FB34200218E3B /* PBXTargetDependency */,
+			);
+			name = "Just A Simple Menu Bar TimerTests";
+			productName = "Just A Simple Menu Bar TimerTests";
+			productReference = B9C4453C280FB34200218E3B /* Just A Simple Menu Bar TimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B9C44545280FB34200218E3B /* Just A Simple Menu Bar TimerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9C44556280FB34200218E3B /* Build configuration list for PBXNativeTarget "Just A Simple Menu Bar TimerUITests" */;
+			buildPhases = (
+				B9C44542280FB34200218E3B /* Sources */,
+				B9C44543280FB34200218E3B /* Frameworks */,
+				B9C44544280FB34200218E3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9C44548280FB34200218E3B /* PBXTargetDependency */,
+			);
+			name = "Just A Simple Menu Bar TimerUITests";
+			productName = "Just A Simple Menu Bar TimerUITests";
+			productReference = B9C44546280FB34200218E3B /* Just A Simple Menu Bar TimerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9C44523280FB34000218E3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					B9C4452A280FB34000218E3B = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					B9C4453B280FB34200218E3B = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = B9C4452A280FB34000218E3B;
+					};
+					B9C44545280FB34200218E3B = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = B9C4452A280FB34000218E3B;
+					};
+				};
+			};
+			buildConfigurationList = B9C44526280FB34000218E3B /* Build configuration list for PBXProject "Just A Simple Menu Bar Timer" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B9C44522280FB34000218E3B;
+			productRefGroup = B9C4452C280FB34000218E3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9C4452A280FB34000218E3B /* Just A Simple Menu Bar Timer */,
+				B9C4453B280FB34200218E3B /* Just A Simple Menu Bar TimerTests */,
+				B9C44545280FB34200218E3B /* Just A Simple Menu Bar TimerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B9C44529280FB34000218E3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9C44536280FB34200218E3B /* Preview Assets.xcassets in Resources */,
+				B9C44533280FB34200218E3B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9C4453A280FB34200218E3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9C44544280FB34200218E3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B9C44527280FB34000218E3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9C4455A280FDDE300218E3B /* TimerListItemView.swift in Sources */,
+				B9C44531280FB34000218E3B /* ContentView.swift in Sources */,
+				B99A2C832824CC9500333BE4 /* Timer + SwiftUI.swift in Sources */,
+				B9C4452F280FB34000218E3B /* App.swift in Sources */,
+				B9C4455C280FDE9100218E3B /* Timer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9C44538280FB34200218E3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9C44541280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9C44542280FB34200218E3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9C4454B280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerUITests.swift in Sources */,
+				B9C4454D280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B9C4453E280FB34200218E3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9C4452A280FB34000218E3B /* Just A Simple Menu Bar Timer */;
+			targetProxy = B9C4453D280FB34200218E3B /* PBXContainerItemProxy */;
+		};
+		B9C44548280FB34200218E3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9C4452A280FB34000218E3B /* Just A Simple Menu Bar Timer */;
+			targetProxy = B9C44547280FB34200218E3B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B9C4454E280FB34200218E3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+			};
+			name = Debug;
+		};
+		B9C4454F280FB34200218E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+			};
+			name = Release;
+		};
+		B9C44551280FB34200218E3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Just A Simple Menu Bar Timer/Just_A_Simple_Menu_Bar_Timer.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Just A Simple Menu Bar Timer/Preview Content\"";
+				DEVELOPMENT_TEAM = 26V9MK8TGP;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.kyleggiero.Just-A-Simple-Menu-Bar-Timer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B9C44552280FB34200218E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Just A Simple Menu Bar Timer/Just_A_Simple_Menu_Bar_Timer.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Just A Simple Menu Bar Timer/Preview Content\"";
+				DEVELOPMENT_TEAM = 26V9MK8TGP;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.kyleggiero.Just-A-Simple-Menu-Bar-Timer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B9C44554280FB34200218E3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26V9MK8TGP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.kyleggiero.Just-A-Simple-Menu-Bar-TimerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Just A Simple Menu Bar Timer.app/Contents/MacOS/Just A Simple Menu Bar Timer";
+			};
+			name = Debug;
+		};
+		B9C44555280FB34200218E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26V9MK8TGP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.kyleggiero.Just-A-Simple-Menu-Bar-TimerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Just A Simple Menu Bar Timer.app/Contents/MacOS/Just A Simple Menu Bar Timer";
+			};
+			name = Release;
+		};
+		B9C44557280FB34200218E3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26V9MK8TGP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.kyleggiero.Just-A-Simple-Menu-Bar-TimerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Just A Simple Menu Bar Timer";
+			};
+			name = Debug;
+		};
+		B9C44558280FB34200218E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26V9MK8TGP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.kyleggiero.Just-A-Simple-Menu-Bar-TimerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Just A Simple Menu Bar Timer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9C44526280FB34000218E3B /* Build configuration list for PBXProject "Just A Simple Menu Bar Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9C4454E280FB34200218E3B /* Debug */,
+				B9C4454F280FB34200218E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9C44550280FB34200218E3B /* Build configuration list for PBXNativeTarget "Just A Simple Menu Bar Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9C44551280FB34200218E3B /* Debug */,
+				B9C44552280FB34200218E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9C44553280FB34200218E3B /* Build configuration list for PBXNativeTarget "Just A Simple Menu Bar TimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9C44554280FB34200218E3B /* Debug */,
+				B9C44555280FB34200218E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9C44556280FB34200218E3B /* Build configuration list for PBXNativeTarget "Just A Simple Menu Bar TimerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9C44557280FB34200218E3B /* Debug */,
+				B9C44558280FB34200218E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B9C44523280FB34000218E3B /* Project object */;
+}
