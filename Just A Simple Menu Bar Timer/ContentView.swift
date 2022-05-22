@@ -13,19 +13,20 @@ struct ContentView: View {
     var timers: [Timer] = []
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             ForEach(timers) { timer in
                 TimerListItemView(timer: timer)
             }
         }
         .frame(minWidth: 200)
+        .padding()
         
         .task {
             timers = [
                 await Timer(kind: .countDown(totalTimeToCountDown: 10 * 60)),
                 await Timer(kind: .countUp(totalTimeToCountUp: 5 * 60)),
                 await Timer(kind: .countDown(totalTimeToCountDown: 30 * 60)),
-                await Timer(kind: .countUp(totalTimeToCountUp: 30)),
+                await Timer(kind: .countUp(totalTimeToCountUp: 5)),
             ]
         }
     }

@@ -1,0 +1,59 @@
+{
+  "pins" : [
+    {
+      "identity" : "swift-introspection",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RougeWare/Swift-Introspection.git",
+      "state" : {
+        "revision" : "dcdae93300ef178c0fc3f5c3c78bbec1541bac12",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "swift-range-tools",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RougeWare/Swift-Range-Tools.git",
+      "state" : {
+        "revision" : "8efcac712d0bd765ac903cb9fd27cc49b6b4ce58",
+        "version" : "1.2.1"
+      }
+    },
+    {
+      "identity" : "swift-safe-collection-access",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RougeWare/Swift-Safe-Collection-Access.git",
+      "state" : {
+        "revision" : "a2a2f8773f5e85804be785177fa3bf1abeb37dea",
+        "version" : "2.2.2"
+      }
+    },
+    {
+      "identity" : "swift-semver",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RougeWare/Swift-SemVer.git",
+      "state" : {
+        "revision" : "adcdc0836253c9bbb5b337eaa9d87553012ae248",
+        "version" : "3.0.0-Beta.5"
+      }
+    },
+    {
+      "identity" : "swift-special-string",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RougeWare/Swift-Special-String.git",
+      "state" : {
+        "revision" : "c5d067206fe1621f44cedb73d9f0d1f4b296838d",
+        "version" : "1.1.3"
+      }
+    },
+    {
+      "identity" : "swift-string-integer-access",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RougeWare/Swift-String-Integer-Access.git",
+      "state" : {
+        "revision" : "595374e76274a7e951ba183fdd7f443801091d14",
+        "version" : "2.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}

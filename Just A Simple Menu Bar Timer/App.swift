@@ -5,7 +5,10 @@
 //  Created by Ky Leggiero on 4/19/22.
 //
 
+import Introspection
 import SwiftUI
+
+
 
 @main
 struct App: SwiftUI.App {
@@ -17,8 +20,9 @@ struct App: SwiftUI.App {
     var body: some Scene {
         WindowGroup {
             VStack {
-                Text("Title?")
+                Text(Introspection.appName)
                     .bold()
+                    .frame(minHeight: 20)
                 
                 Spacer().fixedSize()
                 
@@ -43,14 +47,14 @@ private extension App {
             menuBarIcon.button?.image = NSImage(systemSymbolName: "circle.hexagongrid.fill", accessibilityDescription: "Test")
             
             
-//            NSApp.windows.forEach { window in
+            NSApp.windows.forEach { window in
 //                print(window)
 //
 ////                window.styleMask = [.resizable]
-//                window.standardWindowButton(.closeButton)?.isHidden = true
-//                window.standardWindowButton(.miniaturizeButton)?.isHidden = true
-//                window.standardWindowButton(.zoomButton)?.isHidden = true
-//            }
+                window.standardWindowButton(.closeButton)?.isHidden = true
+                window.standardWindowButton(.miniaturizeButton)?.isHidden = true
+                window.standardWindowButton(.zoomButton)?.isHidden = true
+            }
         }
     }
 }

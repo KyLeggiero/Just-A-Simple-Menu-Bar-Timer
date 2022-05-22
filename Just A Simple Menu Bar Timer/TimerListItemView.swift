@@ -15,7 +15,7 @@ struct TimerListItemView: View {
     private var timerUpdater
     
     @State
-    private var displayValue = ""
+    private var currentTimeDisplayValue = ""
     
     @State
     private var toggleTitle: LocalizedStringKey = ""
@@ -25,17 +25,26 @@ struct TimerListItemView: View {
     
     var body: some View {
         HStack {
-            Text(displayValue)
-            
-            Toggle(toggleTitle, isOn: $timer.isRunning)
-                .onReceive(timer.valuePublisher) { timerValue in
+            Toggle(isOn: $timer.isRunning, label: { TimerToggleLabel(timer.currentValue) })
+                .onReceive(timer.stateChangePublisher) { timerValue in
                     toggleTitle = timerValue.toggleTitle
                 }
-        }
-            .onReceive(timerUpdater) {
-                displayValue = timer.currentValue.description
+                .toggleStyle(.plain)
+            
+            VStack(alignment: .leading) {
+                Text("Unnamed Timer")
+                    .font(.caption)
+                
+                Text(currentTimeDisplayValue)
+                    .font(.largeTitle)
             }
-            .padding().padding()
+            
+            Spacer()
+        }
+        
+        .onReceive(timerUpdater) {
+            currentTimeDisplayValue = timer.currentValue.description
+        }
     }
 }
 
@@ -93,17 +102,25 @@ extension Timer {
 extension Timer.Value: CustomStringConvertible {
     public var description: String {
         switch self {
-        case .notStarted(startingValue: let startingValue):
-            return Int(startingValue.rounded()).description
-            
-        case .running(currentValue: let currentValue):
-            return Int(currentValue.rounded()).description
-            
-        case .completed(finalValue: let finalValue):
-            return Int(finalValue.rounded()).description
-            
-        case .paused(currentValue: let currentValue):
-            return Int(currentValue.rounded()).description
+        case .notStarted(startingValue: let value),
+                .running(currentValue: let value),
+                .completed(finalValue: let value),
+                .paused(currentValue: let value):
+            return format(value)
         }
     }
+    
+    
+    private static let timeFormatter: DateComponentsFormatter = {
+        let timeFormatter = DateComponentsFormatter()
+        timeFormatter.allowedUnits = [.hour, .minute, .second]
+        return timeFormatter
+    }()
+    
+    
+    private func format(_ timestamp: TimeInterval) -> String {
+        Self.timeFormatter.string(from: timestamp)
+            ?? "\(Int(timestamp.rounded())) seconds"
+    }
 }
+

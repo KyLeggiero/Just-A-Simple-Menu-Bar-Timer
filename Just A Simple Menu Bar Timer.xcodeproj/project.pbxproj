@@ -17,6 +17,9 @@
 		B9C4454D280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C4454C280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerUITestsLaunchTests.swift */; };
 		B9C4455A280FDDE300218E3B /* TimerListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C44559280FDDE300218E3B /* TimerListItemView.swift */; };
 		B9C4455C280FDE9100218E3B /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C4455B280FDE9100218E3B /* Timer.swift */; };
+		B9D089D928396AF20067A64F /* TimerToggleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D089D828396AF20067A64F /* TimerToggleLabel.swift */; };
+		B9D089DC2839A66C0067A64F /* Introspection in Frameworks */ = {isa = PBXBuildFile; productRef = B9D089DB2839A66C0067A64F /* Introspection */; };
+		B9D089DE2839B1B90067A64F /* PlainToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D089DD2839B1B90067A64F /* PlainToggleStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,8 @@
 		B9C4454C280FB34200218E3B /* Just_A_Simple_Menu_Bar_TimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Just_A_Simple_Menu_Bar_TimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B9C44559280FDDE300218E3B /* TimerListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerListItemView.swift; sourceTree = "<group>"; };
 		B9C4455B280FDE9100218E3B /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		B9D089D828396AF20067A64F /* TimerToggleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerToggleLabel.swift; sourceTree = "<group>"; };
+		B9D089DD2839B1B90067A64F /* PlainToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainToggleStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9D089DC2839A66C0067A64F /* Introspection in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +112,8 @@
 				B9C44559280FDDE300218E3B /* TimerListItemView.swift */,
 				B9C4455B280FDE9100218E3B /* Timer.swift */,
 				B99A2C822824CC9500333BE4 /* Timer + SwiftUI.swift */,
+				B9D089D828396AF20067A64F /* TimerToggleLabel.swift */,
+				B9D089DD2839B1B90067A64F /* PlainToggleStyle.swift */,
 				B9C44532280FB34200218E3B /* Assets.xcassets */,
 				B9C44537280FB34200218E3B /* Just_A_Simple_Menu_Bar_Timer.entitlements */,
 				B9C44534280FB34200218E3B /* Preview Content */,
@@ -154,6 +162,9 @@
 			dependencies = (
 			);
 			name = "Just A Simple Menu Bar Timer";
+			packageProductDependencies = (
+				B9D089DB2839A66C0067A64F /* Introspection */,
+			);
 			productName = "Just A Simple Menu Bar Timer";
 			productReference = B9C4452B280FB34000218E3B /* Just A Simple Menu Bar Timer.app */;
 			productType = "com.apple.product-type.application";
@@ -226,6 +237,9 @@
 				Base,
 			);
 			mainGroup = B9C44522280FB34000218E3B;
+			packageReferences = (
+				B9D089DA2839A66C0067A64F /* XCRemoteSwiftPackageReference "Swift-Introspection" */,
+			);
 			productRefGroup = B9C4452C280FB34000218E3B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -270,7 +284,9 @@
 			files = (
 				B9C4455A280FDDE300218E3B /* TimerListItemView.swift in Sources */,
 				B9C44531280FB34000218E3B /* ContentView.swift in Sources */,
+				B9D089DE2839B1B90067A64F /* PlainToggleStyle.swift in Sources */,
 				B99A2C832824CC9500333BE4 /* Timer + SwiftUI.swift in Sources */,
+				B9D089D928396AF20067A64F /* TimerToggleLabel.swift in Sources */,
 				B9C4452F280FB34000218E3B /* App.swift in Sources */,
 				B9C4455C280FDE9100218E3B /* Timer.swift in Sources */,
 			);
@@ -598,6 +614,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B9D089DA2839A66C0067A64F /* XCRemoteSwiftPackageReference "Swift-Introspection" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RougeWare/Swift-Introspection.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B9D089DB2839A66C0067A64F /* Introspection */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9D089DA2839A66C0067A64F /* XCRemoteSwiftPackageReference "Swift-Introspection" */;
+			productName = Introspection;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B9C44523280FB34000218E3B /* Project object */;
 }

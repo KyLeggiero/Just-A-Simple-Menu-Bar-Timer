@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import AppKit
 
 
 
@@ -23,7 +24,7 @@ public final actor Timer: ObservableObject, Identifiable {
     private var wallTimeWatcher = Any?.none
     
     @MainActor
-    public private(set) var valuePublisher = Just(ValuePublisher.Output.notStarted(startingValue: .nan))
+    public private(set) var stateChangePublisher: StateChangePublisher = Just(.notStarted(startingValue: .nan))
         .eraseToAnyPublisher()
     
     
@@ -31,17 +32,21 @@ public final actor Timer: ObservableObject, Identifiable {
     ///
     /// To start this timer immediately, use `Timer(kind: someKind).start()`
     ///
-    /// - Parameter kind: What kind of timer is this? More info in the documentation for ``Kind``
+    /// - Parameters:
+    ///   - kind: What kind of timer is this? More info in the documentation for ``Kind``
+    ///   - id:   _optional_ - A universally-unique identifier for this timer. Defaults to a new UUID
     init(kind: Kind, id: UUID = UUID()) async {
         self.kind = kind
         self.id = id
         
-        self.valuePublisher =
-           self.$state
+        self.stateChangePublisher = self.$state
             .map { [self] _ in
-               await self.currentValue
-           }
-           .eraseToAnyPublisher()
+                await self.currentValue
+            }
+            .share()
+            .makeConnectable()
+            .autoconnect()
+            .eraseToAnyPublisher()
     }
 }
 
@@ -176,7 +181,7 @@ public extension Timer {
                 let timeLostFromPausing = timeSincePause + secondsRemaining
                 
                 self.state = .running(originalStartDate: originalStartDate,
-                                 timeLostFromPausing: timeLostFromPausing)
+                                      timeLostFromPausing: timeLostFromPausing)
                 
             case .running(originalStartDate: _, timeLostFromPausing: _),
                     .completed(completionDate: _):
@@ -203,12 +208,12 @@ public extension Timer {
             break
             
         case .running(originalStartDate: let originalStartDate,
-                      timeLostFromPausing: _):
+                      timeLostFromPausing: let timeLostFromPausing):
             await MainActor.run { [weak self] in
                 guard let self = self else { return }
                 self.state = .paused(originalStartDate: originalStartDate,
                                      pauseDate: now,
-                                     totalTimeElapsedAtMomentOfPause: now.timeIntervalSince(originalStartDate))
+                                     totalTimeElapsedAtMomentOfPause: now.timeIntervalSince(originalStartDate) - timeLostFromPausing)
             }
         }
         
@@ -251,6 +256,8 @@ public extension Timer {
     /// Describes the current value of this timer in a way that can be relyed to the user
     @MainActor
     var currentValue: Value {
+        lazy var now = Date()
+        
         switch state {
         case .notStarted:
             switch kind {
@@ -262,19 +269,32 @@ public extension Timer {
             }
             
         case .running(originalStartDate: let originalStartDate, timeLostFromPausing: let timeLostFromPausing): // TODO: Test
-            let secondsElapsedIncludingPauses = (-originalStartDate.timeIntervalSinceNow) - timeLostFromPausing
+            let secondsElapsedExcludingPauses = (-originalStartDate.timeIntervalSince(now)) - timeLostFromPausing
             switch kind {
             case .countUp(totalTimeToCountUp: let totalTimeToCountUp):
-                return .running(currentValue: min(totalTimeToCountUp, secondsElapsedIncludingPauses))
+                if secondsElapsedExcludingPauses >= totalTimeToCountUp {
+                    self.state = .completed(completionDate: originalStartDate + totalTimeToCountUp + timeLostFromPausing,
+                                            totalTimeElapsed: secondsElapsedExcludingPauses)
+                    return .running(currentValue: totalTimeToCountUp)
+                }
+                else {
+                    return .running(currentValue: secondsElapsedExcludingPauses)
+                }
                 
             case .countDown(totalTimeToCountDown: let totalTimeToCountDown):
-                return .running(currentValue: max(0, totalTimeToCountDown - secondsElapsedIncludingPauses))
+                return .running(currentValue: max(0, totalTimeToCountDown - secondsElapsedExcludingPauses))
             }
             
         case .paused(originalStartDate: _,
                      pauseDate: _,
                      totalTimeElapsedAtMomentOfPause: let totalTimeElapsedAtMomentOfPause): // TODO: Test
-            return .paused(currentValue: totalTimeElapsedAtMomentOfPause)
+            switch kind {
+            case .countUp(totalTimeToCountUp: _):
+                return .paused(currentValue: totalTimeElapsedAtMomentOfPause)
+                
+            case .countDown(totalTimeToCountDown: let totalTimeToCountDown):
+                return .paused(currentValue: totalTimeToCountDown - totalTimeElapsedAtMomentOfPause)
+            }
             
         case .completed(completionDate: _,
                         totalTimeElapsed: let totalTimeElapsed):
@@ -432,7 +452,15 @@ public extension Timer {
     
     
     
-    typealias ValuePublisher = AnyPublisher<Value, Never>
+    typealias StateChangePublisher = AnyPublisher<Value, Never>
+}
+
+
+
+// MARK: - Conformances
+
+extension Timer.Value: Equatable {
+    
 }
 
 
