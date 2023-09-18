@@ -1,0 +1,3 @@
+[submodule "lib/RougeWare/Swift-SerializationTools"]
+	path = lib/RougeWare/Swift-SerializationTools
+	url = https://github.com/RougeWare/Swift-SerializationTools.git
