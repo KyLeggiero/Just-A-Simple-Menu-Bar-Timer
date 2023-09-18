@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State
-    var timers: [Timer] = []
+    var timers: [Timer]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -20,20 +20,11 @@ struct ContentView: View {
         }
         .frame(minWidth: 200)
         .padding()
-        
-        .task {
-            timers = [
-                await Timer(kind: .countDown(totalTimeToCountDown: 10 * 60)),
-                await Timer(kind: .countUp(totalTimeToCountUp: 5 * 60)),
-                await Timer(kind: .countDown(totalTimeToCountDown: 30 * 60)),
-                await Timer(kind: .countUp(totalTimeToCountUp: 5)),
-            ]
-        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(timers: .demo)
     }
 }

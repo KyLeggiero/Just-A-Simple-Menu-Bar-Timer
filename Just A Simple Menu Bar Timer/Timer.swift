@@ -35,22 +35,43 @@ public final actor Timer: ObservableObject, Identifiable {
     /// - Parameters:
     ///   - kind: What kind of timer is this? More info in the documentation for ``Kind``
     ///   - id:   _optional_ - A universally-unique identifier for this timer. Defaults to a new UUID
-    init(kind: Kind, id: UUID = UUID()) async {
+    init(kind: Kind, id: UUID = UUID()) {
         self.kind = kind
         self.id = id
         
-        self.stateChangePublisher = self.$state
-            .map { [self] _ in
-                await self.currentValue
+        Task {
+            let statePublisher = await self.$state
+                .map { [self] _ in
+                    await self.currentValue
+                }
+                .share()
+                .makeConnectable()
+                .autoconnect()
+                .eraseToAnyPublisher()
+            
+            await MainActor.run {
+                self.stateChangePublisher = statePublisher
             }
-            .share()
-            .makeConnectable()
-            .autoconnect()
-            .eraseToAnyPublisher()
+        }
     }
 }
 
 
+
+// MARK: - Demo
+
+public extension Array where Element == Timer {
+    static var demo: Self { [
+        Timer(kind: .countDown(totalTimeToCountDown: 10 * 60)),
+        Timer(kind: .countUp(totalTimeToCountUp: 5 * 60)),
+        Timer(kind: .countDown(totalTimeToCountDown: 30 * 60)),
+        Timer(kind: .countUp(totalTimeToCountUp: 5)),
+    ] }
+}
+
+
+
+// MARK: - To be moved
 
 public struct AsyncMapPublisher<Upstream: Publisher, Output>: Publisher {
     

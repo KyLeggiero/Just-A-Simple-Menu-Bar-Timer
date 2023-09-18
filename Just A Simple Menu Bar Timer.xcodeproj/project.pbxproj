@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B9236B9728C4592D00AC69B6 /* Just-A-Simple-Menu-Bar-Timer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Just-A-Simple-Menu-Bar-Timer-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B99A2C822824CC9500333BE4 /* Timer + SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer + SwiftUI.swift"; sourceTree = "<group>"; };
 		B9C4452B280FB34000218E3B /* Just A Simple Menu Bar Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Just A Simple Menu Bar Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C4452E280FB34000218E3B /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -107,6 +108,7 @@
 		B9C4452D280FB34000218E3B /* Just A Simple Menu Bar Timer */ = {
 			isa = PBXGroup;
 			children = (
+				B9236B9728C4592D00AC69B6 /* Just-A-Simple-Menu-Bar-Timer-Info.plist */,
 				B9C4452E280FB34000218E3B /* App.swift */,
 				B9C44530280FB34000218E3B /* ContentView.swift */,
 				B9C44559280FDDE300218E3B /* TimerListItemView.swift */,
@@ -461,11 +463,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Just-A-Simple-Menu-Bar-Timer-Info.plist";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.kyleggiero.Just-A-Simple-Menu-Bar-Timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -489,11 +494,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Just-A-Simple-Menu-Bar-Timer-Info.plist";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.kyleggiero.Just-A-Simple-Menu-Bar-Timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";

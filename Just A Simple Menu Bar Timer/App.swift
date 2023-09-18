@@ -13,48 +13,24 @@ import SwiftUI
 @main
 struct App: SwiftUI.App {
     
-    @NSApplicationDelegateAdaptor
-    private var appDelegate: AppDelegate
     
     
     var body: some Scene {
-        WindowGroup {
-            VStack {
+        MenuBarExtra {
+            VStack(alignment: .leading) {
                 Text(Introspection.appName)
-                    .bold()
-                    .frame(minHeight: 20)
+                    .frame(maxWidth: .infinity)
+                    .font(.headline)
+                    .padding()
+                    .background(.bar)
                 
                 Spacer().fixedSize()
                 
-                ContentView()
+                ContentView(timers: timers)
             }
-            .ignoresSafeArea()
-            .fixedSize()
+        } label: {
+            Image(systemName: "circle.hexagongrid.fill")
         }
-        .windowStyle(.hiddenTitleBar)
-    }
-}
-
-
-
-private extension App {
-    class AppDelegate: NSObject, NSApplicationDelegate {
-        
-        var menuBarIcon: NSStatusItem!
-        
-        func applicationDidFinishLaunching(_ notification: Notification) {
-            menuBarIcon = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-            menuBarIcon.button?.image = NSImage(systemSymbolName: "circle.hexagongrid.fill", accessibilityDescription: "Test")
-            
-            
-            NSApp.windows.forEach { window in
-//                print(window)
-//
-////                window.styleMask = [.resizable]
-                window.standardWindowButton(.closeButton)?.isHidden = true
-                window.standardWindowButton(.miniaturizeButton)?.isHidden = true
-                window.standardWindowButton(.zoomButton)?.isHidden = true
-            }
-        }
+        .menuBarExtraStyle(.window)
     }
 }

@@ -124,3 +124,13 @@ extension Timer.Value: CustomStringConvertible {
     }
 }
 
+
+
+struct TimerListItemView_Previews: PreviewProvider {
+    static var previews: some View {
+        List {
+            TimerListItemView(timer: Timer(kind: .countDown(totalTimeToCountDown: 10)))
+            TimerListItemView(timer: Timer(kind: .countDown(totalTimeToCountDown: 1000)))
+        }
+    }
+}
